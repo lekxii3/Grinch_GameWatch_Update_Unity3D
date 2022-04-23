@@ -20,7 +20,7 @@ private void Start()
        if(other.gameObject.CompareTag("Grinch"))
        {
            Debug.Log("coffre touché");
-          SignalShapeLaunch?.Invoke();                      
+           SignalShapeLaunch?.Invoke();                      
         }
 
     }
