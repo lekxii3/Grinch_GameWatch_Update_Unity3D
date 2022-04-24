@@ -19,6 +19,7 @@ private Rigidbody2D rb2D;
 
 //--------------------------------------------------------------------------//
 public GameObject GiftCatched;
+[HideInInspector] public bool grinchCatchedGift = false;
 
 
 private void Start() 
@@ -36,7 +37,6 @@ private void Update()
  private void Deplacement() // input de déplacement des 4 différents positions (il en manque un vers le coffre)
  {
 
-     indexPosition = Mathf.Clamp(indexPosition,0,3);
      position[0] = position1;
      position[1] = position2;
      position[2] = position3;
@@ -64,6 +64,7 @@ private void OnCollisionEnter2D(Collision2D other)
     {
         print("je m'anime");
         anim.SetTrigger("catchTrigger");
+        grinchCatchedGift = true;
         GiftCatched.SetActive(true); //Amelioration a faire : apparaitre le cadeau une fois l'animation fini
     }    
 }

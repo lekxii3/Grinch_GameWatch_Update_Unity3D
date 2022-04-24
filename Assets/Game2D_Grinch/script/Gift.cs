@@ -14,9 +14,10 @@ public class Gift : MonoBehaviour
         if(other.gameObject.CompareTag("ground"))
         {
             SignalGiftLaunch?.Invoke();
+            Destroy(gameObject);    
         }   
 
-        Destroy(gameObject);           
+               
    }
 
 
